@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-commerce: #C5A059; /* Muted Gold */
+}
+
+/* Enable class-based dark mode in Tailwind 4 */
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-color: #FFFFFF;
+    --text-color: #1A1A1A;
+    --card-bg: #F9F9F9;
+    --border-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .dark {
+    --bg-color: #0A0A0A;
+    --text-color: #F5F5F5;
+    --card-bg: #141414;
+    --border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    @apply transition-colors duration-300;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #555;
+}

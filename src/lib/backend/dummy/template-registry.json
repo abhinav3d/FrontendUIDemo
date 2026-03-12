@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "lastUpdated": 1772350637654,
+  "groups": [
+    {
+      "id": "gid://shopify/Collection/479045746916",
+      "slug": "pets",
+      "templateUrl": "app/template/pets",
+      "name": "Pets",
+      "description": "Transform your beloved pets into high-quality 3D masterpieces.",
+      "generationPattern": "IMAGE_TO_3D_FULL_SYNTHESIS",
+      "executionMode": "AI_PLUS_ARTIST",
+      "productionCategories": [
+        "PRINTED_3D"
+      ],
+      "expectedOutputs": [
+        "PHYSICAL_3D_PRINT"
+      ],
+      "inputRequirements": [
+        {
+          "type": "IMAGE",
+          "required": true,
+          "multipleAllowed": false
+        }
+      ],
+      "supportsVariants": false,
+      "isQuoteRequired": false,
+      "allowsUpgradeToArtist": true,
+      "isPromoted": true,
+      "styleTemplateIds": [
+        "gid://shopify/Product/8934244810980",
+        "gid://shopify/Product/8934240911588",
+        "gid://shopify/Product/8934239895780",
+        "gid://shopify/Product/8934238028004",
+        "gid://shopify/Product/8934237208804",
+        "gid://shopify/Product/8934236192996",
+        "gid://shopify/Product/8934221807844",
+        "gid://shopify/Product/8934220169444",
+        "gid://shopify/Product/8934218465508",
+        "gid://shopify/Product/8934215418084",
+        "gid://shopify/Product/8934213681380",
+        "gid://shopify/Product/8934208045284",
+        "gid://shopify/Product/8934202441956",
+        "gid://shopify/Product/8934196707556",
+        "gid://shopify/Product/8934182486244"
+      ],
+      "defaultStyleTemplateId": "gid://shopify/Product/8934244810980",
+      "isActive": true,
+      "version": 1,
+      "createdAt": "2026-03-01T07:37:17.653Z",
+      "updatedAt": "2026-03-01T07:37:17.654Z",
+      "thumbnailUrl": "https://cdn.shopify.com/s/files/1/0795/1119/1780/collections/pet-dog-and-cat.png?v=1772269853"
+    },
+    {
+      "id": "gid://shopify/Collection/479343444196",
+      "slug": "humans",
+      "templateUrl": "app/template/humans",
+      "name": "Humans",
+      "description": "Create stunning 3D avatars and figurines of yourself or others.",
+      "generationPattern": "IMAGE_TO_3D_FULL_SYNTHESIS",
+      "executionMode": "AI_PLUS_ARTIST",
+      "productionCategories": [
+        "PRINTED_3D"
+      ],
+      "expectedOutputs": [
+        "PHYSICAL_3D_PRINT"
+      ],
+      "inputRequirements": [
+        {
+          "type": "IMAGE",
+          "required": true,
+          "multipleAllowed": false
+        }
+      ],
+      "supportsVariants": false,
+      "isQuoteRequired": false,
+      "allowsUpgradeToArtist": true,
+      "isPromoted": true,
+      "styleTemplateIds": [
+        "gid://shopify/Product/8933989712100",
+        "gid://shopify/Product/8933989679332",
+        "gid://shopify/Product/8933989548260",
+        "gid://shopify/Product/8933989515492",
+        "gid://shopify/Product/8933989122276",
+        "gid://shopify/Product/8933988991204",
+        "gid://shopify/Product/8933987713252",
+        "gid://shopify/Product/8923666907364"
+      ],
+      "defaultStyleTemplateId": "gid://shopify/Product/8933989712100",
+      "isActive": true,
+      "version": 1,
+      "createdAt": "2026-03-01T07:37:17.654Z",
+      "updatedAt": "2026-03-01T07:37:17.654Z",
+      "thumbnailUrl": "https://cdn.shopify.com/s/files/1/0795/1119/1780/collections/game_character_semi_real.png?v=1772269838"
+    }
+  ],
+  "templates": [
+    {
+      "id": "gid://shopify/Product/8934244810980",
+      "name": "Pets: Royal Style",
+      "thumbnailUrl": "https://picsum.photos/seed/royal/800/800",
+      "groupId": "gid://shopify/Collection/479045746916",
+      "styleKey": "PETS-ROYAL-STYLE",
+      "styleDisplayName": "Pets: Royal Style",
+      "shopifyProductId": "gid://shopify/Product/8934244810980",
+      "aiCoinCost": 10,
+      "aiCoinCurrency": "AI_COIN",
+      "aiWorkflowSpec": {
+        "inputPolicy": {
+          "minImages": 1,
+          "maxImages": 1,
+          "subject": "pet",
+          "allowTextPrompt": false,
+          "allowReferenceObject": false
+        },
+        "validationSteps": [
+          "NSFW_CHECK",
+          "OBJECT_DETECTION"
+        ],
+        "generationSteps": [
+          {
+            "step": "IMAGE_TO_3D",
+            "modelProfile": "pet-3d-v1"
+          }
+        ],
+        "failurePolicy": {
+          "onNSFW": "REDIRECT_TO_SERVICE",
+          "onLowResolution": "AUTO_UPSCALE",
+          "onMultipleFaces": "ALLOW_WITH_SELECTION"
+        }
+      },
+      "configurableOptions": [],
+      "isActive": true,
+      "version": 1,
+      "createdAt": "2026-03-01T07:37:17.654Z",
+      "updatedAt": "2026-03-01T07:37:17.654Z"
+    },
+    {
+      "id": "gid://shopify/Product/8934240911588",
+      "name": "Pets: Luxury Matte Gold / Monochrome",
+      "thumbnailUrl": "https://picsum.photos/seed/gold/800/800",
+      "groupId": "gid://shopify/Collection/479045746916",
+      "styleKey": "PETS-LUXURY-MATTE-GOLD-MONOCHROME",
+      "styleDisplayName": "Pets: Luxury Matte Gold / Monochrome",
+      "shopifyProductId": "gid://shopify/Product/8934240911588",
+      "aiCoinCost": 10,
+      "aiCoinCurrency": "AI_COIN",
+      "aiWorkflowSpec": {
+        "inputPolicy": {
+          "minImages": 1,
+          "maxImages": 1,
+          "subject": "pet",
+          "allowTextPrompt": false,
+          "allowReferenceObject": false
+        },
+        "validationSteps": [
+          "NSFW_CHECK",
+          "OBJECT_DETECTION"
+        ],
+        "generationSteps": [
+          {
+            "step": "IMAGE_TO_3D",
+            "modelProfile": "pet-3d-v1"
+          }
+        ],
+        "failurePolicy": {
+          "onNSFW": "REDIRECT_TO_SERVICE",
+          "onLowResolution": "AUTO_UPSCALE",
+          "onMultipleFaces": "ALLOW_WITH_SELECTION"
+        }
+      },
+      "configurableOptions": [],
+      "isActive": true,
+      "version": 1,
+      "createdAt": "2026-03-01T07:37:17.654Z",
+      "updatedAt": "2026-03-01T07:37:17.654Z"
+    },
+    {
+      "id": "gid://shopify/Product/8933989712100",
+      "name": "Fantasy Hero",
+      "thumbnailUrl": "https://cdn.shopify.com/s/files/1/0795/1119/1780/files/Fantasyhero.jpg?v=1772188970",
+      "groupId": "gid://shopify/Collection/479343444196",
+      "styleKey": "FANTASY-HERO",
+      "styleDisplayName": "Fantasy Hero",
+      "shopifyProductId": "gid://shopify/Product/8933989712100",
+      "aiCoinCost": 10,
+      "aiCoinCurrency": "AI_COIN",
+      "aiWorkflowSpec": {
+        "inputPolicy": {
+          "minImages": 1,
+          "maxImages": 1,
+          "subject": "human",
+          "allowTextPrompt": false,
+          "allowReferenceObject": false
+        },
+        "validationSteps": [
+          "NSFW_CHECK",
+          "FACE_DETECTION"
+        ],
+        "generationSteps": [
+          {
+            "step": "IMAGE_TO_3D",
+            "modelProfile": "human-3d-v1"
+          }
+        ],
+        "failurePolicy": {
+          "onNSFW": "REDIRECT_TO_SERVICE",
+          "onLowResolution": "AUTO_UPSCALE",
+          "onMultipleFaces": "ALLOW_WITH_SELECTION"
+        }
+      },
+      "configurableOptions": [],
+      "isActive": true,
+      "version": 1,
+      "createdAt": "2026-03-01T07:37:17.654Z",
+      "updatedAt": "2026-03-01T07:37:17.654Z"
+    }
+  ]
+}
